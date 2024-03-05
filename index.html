@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <title>Займись собой</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Сайт творчества и духовного развития" />
+   <meta name="author" content="" />
+   
+   <link rel="shortcut icon" href="favicon.ico" />
+   <link rel="stylesheet" type="text/css" href="css/style.css" />
+   <link rel="stylesheet" type="text/css" href="css/style_blick.css" />
+   <style>
+
+   </style>
+</head>
+
+<body>
+<script>
+  function randomNumber(min, max)
+	{
+		return Math.round(min - 0.5 + Math.random()*(max - min + 1));
+	}
+  let j = randomNumber(108, 247);
+  document.body.style.backgroundImage = 'url(images/' + j + '.jpg)';
+</script>
+
+<div class="container">
+ <header>
+  <h1 id = "header_h1">
+    <b>Займись собой
+  </h1>
+  <p id = "header_p">Есть трещина во всём,  так проникает свет</p>
+ </header>
+ 
+ <nav class="top-menu">
+  
+  <a class="navbar-logo" href="" ><img src="../alasunhome/images/logo.jpg" width= 100></a>
+  
+  <ul class="menu-main">
+     <li><a href="">Главная</a></li>
+     <li><a href="../alasunhome/blog.html">Блог</a></li>
+     <li><a href="../alasunhome/osho.html">Ошо</a></li>
+     <li><a href="../alasunhome/more.html">И ещё</a></li>
+     <li><a href="../alasunhome/about.html">О нас</a></li>
+     <li><a href= "../alasunhome/avtorization.html">Вход</a></li>
+  </ul>
+
+ <span class = "close_menu" onclick = "close_menu()">x</span>
+ <span class = "open_menu" onclick = "open_menu()">=</span>
+</nav>
+
+<script type="text/javascript" src="js/mobile_menu.js"></script>
+
+<h3 id = "title_main_krayon"> Послание дня от Крайона</h3>
+<div class = "opacity">
+<div id = "text_krayon">
+<script src = "js/krayon.js"></script>	  
+ <script>
+  let i = randomNumber(1, 51);
+  document.writeln(massiv_Krayon[i]);
+ </script>
+</div>
+<div class="container">
+	<p><a  class="preview-block__btn custom-btn animated-word" href = "../alasunhome/blog.html">В путешествие . . .</a></p>
+</div>
+
+<style>
+#title_main_krayon {
+position: relative;
+animation: slideDown 1s;
+}
+#text_krayon {
+animation: slideShow 3s;
+
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes slideShow {
+from {opacity:0;}
+to {opacity:1;}
+}
+
+</style>
+</body>
+
+</html>
