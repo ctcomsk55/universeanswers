@@ -1,0 +1,134 @@
+body {
+  background: #f9f9f9;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+#container {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+
+.play {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 60px solid #318c57;
+  margin: 100px auto 50px auto;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  left: 10px;
+}
+
+.play:before {
+  content: '';
+  position: absolute;
+  top: -75px;
+  left: -115px;
+  bottom: -75px;
+  right: -35px;
+  border-radius: 50%;
+  border: 10px solid #318c57;
+  z-index: 2;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+.play:after {
+  content: '';
+  opacity: 0;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+}
+.play:hover:before, .play:focus:before {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+.play.active {
+  border-color: transparent;
+}
+.play.active:after {
+  content: '';
+  opacity: 1;
+  width: 25px;
+  height: 80px;
+  position: absolute;
+  right: 8px;
+  top: -40px;
+  border-right: 20px solid #318c57;
+  border-left: 20px solid #318c57;
+}
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* button files */
+
+#files input[type="file"]{
+display: none;/* скрываем input file */
+}
+#files{
+position: relative;
+overflow: hidden;
+width: 250px;
+height: 40px;
+background: #4169E1;
+border-radius: 10px;
+color: #fff;
+text-align: center;
+}
+
+#files:hover {
+background: #1E90FF;
+}
+#files label {
+display: block;
+//position: absolute;
+//top: 0;
+//left: 0;
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+#files span {
+line-height: 40px;
+font-weight: bold;
+}
+/**/
+.back_to_site {
+ margin-top:50px;
+ border: 60px solid transparent; 
+ border-top: 60px solid #ffa705;
+}
+h1 {
+  text-transform: uppercase;
+  color: #34495e;
+  letter-spacing: 2px;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
