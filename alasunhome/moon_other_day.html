@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu_burger.css" />
+	
+	<title> Лунные дни </title> 
+</head>
+	
+<body id="moon">
+<style>
+	body {
+	 height: 100%;
+	 font-family:  Rounded;
+	 background:url(images/registr_img1.jpg)no-repeat;
+	 //background-color:darkblue;
+	 background-size: cover;
+	 background-attachment: fixed;
+	}
+	nav {
+    background-color: #020d1c1c;
+    }
+	.breadcrumbs, .breadcrumbs a, .breadcrumbs:hover {
+	background-color: #f9f8f800;
+	color: white;
+	}
+	main {
+	margin: 20px;
+	}
+	.top-menu, footer {
+	background: #ffffff8c;
+	}
+	.moon {
+	margin-top: 70px;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	}
+	.moon span{
+	font-size: 50px;
+	color: yellow;
+	}
+	.moon_text {
+    width: 70%;
+	color: white;
+	font-size: 20px;
+	//padding: 0 0 60px 0;
+	background-color: #ffffff4a;
+    padding: 0 100px;
+	}
+	
+	@media screen and (max-width: 400px) {
+	.moon_text {
+	  width: 100%;
+	  font-size: 15px;
+    }
+   }
+</style>
+
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="left-item"><a href="../sunhome/index.html">Главная</a></li>
+    <li class="left-item"><a href="blog.html">Блог</a></li>
+    <li class="left-item"><a href="osho.html">Ошо</a></li>
+    <li class="left-item"><a href = "more.html">Что-то ещё</a></li>
+    <li class="left-item"><a href="about.html">О нас</a></li>
+    <li class="right-item"><a href="avtorization.html">Войти</a></li>
+</ul>
+
+ <a class="navbar-logo" href="../sunhome/index.html"><img src="../alasunhome/images/logo.jpg"></a>
+ <span class = "close_menu" onclick = "close_menu()">x</span>
+ <span class = "open_menu" onclick = "open_menu()">=</span>
+</nav>
+
+<div class = "breadcrumbs">
+<a href = "moon.html">Лунный день сегодня &#10057; </a>Другие лунные дни
+</div>
+
+<script src = "js/massiv_moon.js"></script>
+<script>
+	document.writeln('<main class="moon"><h2>Лунные дни</h2>');
+	document.writeln('<br><br><div class="moon_text">');
+	for (i = 1; i < 31; ++i) {
+	   document.writeln('&#10057;<br><b><u>'+i+' лунный день</u></b><br> ');
+	   document.writeln(massiv_Mesto[i]);
+	   document.writeln('<br><br>');
+    }
+</script>
+</div>
+</main>
+
+<a href = "../gadaniy/index.html" target = "_blank" id = "gadanie"> Погадать </a>
+
+<footer>
+<div id = "replaceme">
+  <span>"There is a crack in everything, that's how light gets in" ( Leonard Cohen )</span>
+  <span>"Есть трещина во всём, так проникает свет" ( Леонард Коэн ) </span>
+</div>
+<br>
+<p id = "copyright"> &copy; Сайт творчества и духовного развития.</p>
+</footer>
+
+</body>
+</html>

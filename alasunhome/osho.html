@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Сайт творчества и духовного развития" />
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<script type="text/javascript" src="js/massivs_osho.js"></script>
+	<script type="text/javascript" src="js/massivs_blog.js"></script>
+	
+	<title>ОШО</title> 
+</head>
+
+<body>
+<style>
+table {
+margin-top: 20px;
+margin-left: 30px;
+}
+.count {
+	position:relative;
+	left: 90%;
+    margin-left: -45px;
+}
+.count img{
+	position:absolute;
+	width: 20px;
+	margin-left: -25px;
+	margin-top: -2px;
+}
+.recomendations {
+  margin-top: 100px;
+}
+</style>
+
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="left-item"><a href="../sunhome/index.html">Главная</a></li>
+    <li class="left-item"><a href="blog.html">Блог</a></li>
+    <li class="left-item"><a href="osho.html">Ошо</a></li>
+    <li class="left-item"><a href = "more.html">Что-то ещё</a></li>
+    <li class="left-item"><a href="about.html">О нас</a></li>
+    <li class="right-item"><a href="avtorization.html">Войти</a></li>
+</ul>
+
+ <a class="navbar-logo" href="../sunhome/index.html"><img src="../alasunhome/images/logo.jpg"></a>
+ <span class = "close_menu" onclick = "close_menu()">x</span>
+ <span class = "open_menu" onclick = "open_menu()">=</span>
+</nav>
+
+<div class = "main_page">
+
+<div id = "main_head">
+  <h3 id = "main_head_h2"></h3>
+</div>
+<div id = "second_block">
+
+<script>
+
+//alert(massiv_osho.length)
+let mainHead = document.querySelector('#main_head');
+let mainHead_h2 = document.querySelector('#main_head_h2');
+let secondBlock = document.querySelector('#second_block');
+
+let i = randomNumber(0, 33);
+let j = randomNumber(0, massiv_osho.length -1);
+mainHead.style.backgroundImage = 'url(img_osho/osho' + i + '.jpg)';
+mainHead_h2.innerHTML = massiv_osho[j][0];
+secondBlock.innerHTML = massiv_osho[j][1];
+
+function randomNumber(min, max)
+{
+  return Math.round(min - 0.5 + Math.random()*(max - min + 1));
+}
+</script>
+<script type="text/javascript" src="js/mobile_menu.js"></script>
+
+<img src = "icons/ikonki_lotos_1.jpg" class = "icon_lotos center"/>
+
+</div>
+<div id = "main_content">
+
+<div class="content_block">
+	<div class="content_block_img_left" style="background-image: url(images/osho_taro.jpg);"></div>
+		<div class="content_block_text_left">
+		   <h2>Ошо Дзен Таро</h2>
+			<p>Карты Ошо Дзен Таро помогут сконцентрироваться на том, что происходит здесь и сейчас...
+			<br>
+			  <a href="osho_taro.html">&#10057; Читать всё &#10057;</a>
+			</p>
+			<span class = "count"><img src = "icons/eye.png" width = 20/>111</span> 
+		</div>
+</div>
+
+<div class="content_block">
+	<div class="content_block_img_right" style="background-image: url(images/osho_meditation.jpg);"></div>
+		<div class="content_block_text_right">
+		   <h2>Медитации Ошо</h2>
+		   			<p>«Иногда бывает так, что медитация, которую вы чувствуете как наиболее некомфортную для себя, может быть как раз той, которая поможет вам. Дискомфорт может быть потому, что она будет бороться против некоторых из ваших привычек и глубоко укорененных вещей.»
+			  <br>
+			  <a href="osho_meditations.html">&#10057; Читать всё &#10057;</a>
+			</p>
+			<span class = "count"><img src = "icons/eye.png" width = 20/>111</span>
+		</div>
+</div>
+
+<div class="content_block">
+	<div class="content_block_img_left" style="background-image: url(images/osho_books.jpg);"></div>
+		<div class="content_block_text_left">
+		   <h2>Книги Ошо</h2>
+			<p>Трам пам пам , бла бла бла...
+			<br>
+			  <a href="osho_taro.html">&#10057; Читать всё &#10057;</a>
+			</p>
+			<span class = "count"><img src = "icons/eye.png" width = 20/>111</span>
+		</div>
+</div>
+
+<div class="content_block">
+	<div class="content_block_img_right" style="background-image: url(images/osho_pritchi.jpg);"></div>
+		<div class="content_block_text_right">
+		   <h2>Притчи от Ошо</h2>
+			<p>Независимо от того, счастливы вы в данный момент или несчастливы, помните — это тоже пройдет...<br>
+              <a href = "osho_pritchi.html">&#10057; Читать всё &#10057;</a>
+			</p>
+			<span class = "count"><img src = "icons/eye.png" width = 20/>111</span>
+		</div>
+</div>
+
+
+</div><!-- main_content -->
+
+<div class = "recomendations">
+  <h2 style = "font-size: 30px">Популярное</h2>
+<script>
+
+for(let i = 0; i< massiv_items.length; i++) {
+document.writeln('<a href = "">');
+document.writeln('<div class = "main_item_blog">');
+document.writeln('<div class = "main_item_blog_img"></div>');
+
+document.writeln('<div class = "main_item_blog_text">');
+document.writeln('<h2>' + massiv_items[i][0] + '</h2>');
+document.writeln(massiv_items[i][1]);
+
+document.writeln('<a href = "blog_'+ massiv_items[i][2] + '.html">&#10057; Читать всё &#10057; ></a>');
+document.writeln('<br><br>');
+document.writeln('<table><td><img src = "icons/eye.png" width = "20" style ="float: right"><td> 11</td></table>');
+document.writeln('</div>');
+document.writeln('</div>');
+document.writeln('</a>');
+}
+</script>
+
+</div>
+
+</div><!--- main_page -->
+
+<footer>
+<div id = "replaceme">
+  <span>"There is a crack in everything, that's how light gets in" ( Leonard Cohen )</span>
+  <span>"Есть трещина во всём, так проникает свет" ( Леонард Коэн ) </span>
+</div>
+<br>
+<p id = "copyright"> &copy; Сайт творчества и духовного развития.</p>
+</footer>
+
+</body>
+</html>

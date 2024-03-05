@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Сайт творчества и духовного развития" />
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/massivs_osho.js"></script>
+	<title>Таро ОШО Дзен</title> 
+</head>
+	
+<body>
+
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="left-item"><a href="../sunhome/index.html">Главная</a></li>
+    <li class="left-item"><a href="blog.html">Блог</a></li>
+    <li class="left-item"><a href="osho.html">Ошо</a></li>
+    <li class="left-item"><a href = "more.html">Что-то ещё</a></li>
+    <li class="left-item"><a href="about.html">О нас</a></li>
+    <li class="right-item"><a href="avtorization.html">Войти</a></li>
+</ul>
+
+ <a class="navbar-logo" href="../sunhome/index.html"><img src="../alasunhome/images/logo.jpg"></a>
+ <span class = "close_menu" onclick = "close_menu()">x</span>
+ <span class = "open_menu" onclick = "open_menu()">=</span>
+</nav>
+
+<div class = "breadcrumbs">
+<a href = "osho.html">Ошо &#10057; </a>Таро Ошо Дзен
+</div>
+
+<div class = "moon">
+<a href = "moon.html">&#10057; ЛУНА&#10057; </a>
+</div>
+
+<style>
+.center_block {
+ display: grid;
+ gap: 20px;
+ grid-template-rows: 1fr auto;
+ }
+.center_block, #all_cards{
+font-size: 18px;
+line-height: 1.3;
+text-align: justify;
+}
+.day_card {
+//height: 400px;
+}
+.day_card img{
+float: left;
+padding-right: 20px;
+}
+#gadanie{
+    float: right;
+    padding: 20px 50px;
+    background-color: #842384ad;
+    position: fixed;
+    top: 500px;
+    right: 0px;
+    color: white;
+    z-index: 100;
+}
+#gadanie:hover {
+ background: #7b03c5b3;
+}
+.moon {
+float: right;
+margin-right: 40px;
+font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+.center_block, .day_card, #all_cards {
+  font-size: 15px;
+  line-height: 1.2;
+}
+.center_block img {
+  height: 25%;
+  width: 30%;
+}
+.day_card {
+//height: 350px;
+}
+.day_card img{
+padding-right: 5px;
+}
+}
+</style>
+
+
+<div class = "center_block">
+
+  <div class = "day_card">
+	<h2 style = "padding: 30px"> Таро Ошо Дзен </h2>
+	<h3> Карта дня </h3>
+
+	<script type="text/javascript" src="js/mobile_menu.js"></script>
+
+	<script>
+		let size = " width = 190 height = 250";
+		let j = randomNumber(0,78);
+
+		document.writeln('<img src = "../gadaniy/Таро Ошо/Прямой/Аркан' + j + '.jpg"' + size);
+		document.writeln('<p>' + massiv_arkanov[j].slice(0, massiv_arkanov[j].search('<br>')));
+		document.writeln('<a href = "../gadaniy/Таро Ошо/Прямой/Аркан' + j + '.html" target = _blank><br>&#10057; Читать всё &#10057; </a></p>')
+
+		function randomNumber(min, max)
+		{
+		  return Math.round(min - 0.5 + Math.random()*(max - min + 1));
+		}
+	</script>
+  </div> <!--- day_card  --->
+
+<a href = "../gadaniy/index.html" target = "_blank" id = "gadanie"> Погадать </a>
+
+  <div id = "all_cards">
+	<h2 style = "padding: 30px">Все арканы Таро Ошо Дзен </h2>
+	<p>
+	Карты Ошо Дзен Таро, помогут сконцентрироваться на том, что происходит здесь и сейчас. Основной принцип этой игры за пределами сознательного состоит в мудрости философии Дзен, согласно которой все, что с нами происходит, является прямым отражением наших мыслей и чувств, даже если мы сами не можем описать того, что чувствуем, или проследить за ходом своих мыслей.
+	<br>
+	Это тонкий и легкий инструмент, который позволяет получить доступ к мудрости и интуиции. Они помогают понять себя, свои цели и желания, а также научиться принимать решения, основанные на интуиции и опыте.
+<br>
+Ошо Дзен Таро может использоваться как для личного использования, так и для работы с клиентами. Арканы могут помочь в решении различных проблем, таких как поиск пути к самореализации, улучшение отношений с другими людьми, преодоление страхов и сомнений.
+<br>
+Каждая карта Таро Ошо имеет свое значение и символику, которые можно интерпретировать в соответствии с вашей жизненной ситуацией. Карты могут быть использованы для гадания или просто для медитации и размышления.
+	</p>
+	<br>
+	<br>
+	<script>
+	 for(let i=0; i <= 78; i++) {
+	  <!-- document.writeln('<a href = "../gadaniy/Таро Ошо/Прямой/Аркан' + i + '.html" target = _blank><div  data-text = "' + massiv[i] + '" class = "item"><img src = "../gadaniy/Таро Ошо/Прямой/Аркан' + i + '.jpg"' + size +' /></div></a>'); -->
+	  document.write('<a href = "../gadaniy/Таро Ошо/Прямой/Аркан' + i + '.html" target = _blank><img src = "../gadaniy/Таро Ошо/Прямой/Аркан' + i + '.jpg"' + size +' /></a>');
+	 }
+	</script>
+  </div><!--- all_cards -->
+</div><!--- center_block -->
+
+<footer>
+<div id = "replaceme">
+  <span>"There is a crack in everything, that's how light gets in" ( Leonard Cohen )</span>
+  <span>"Есть трещина во всём, так проникает свет" ( Леонард Коэн ) </span>
+</div>
+<br>
+<p id = "copyright"> &copy; Сайт творчества и духовного развития.</p>
+</footer>
+
+</body>
+</html>

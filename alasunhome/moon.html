@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu_burger.css" />
+	
+	<title> Лунный день сегодня </title> 
+</head>
+	
+<body id="moon">
+<style>
+	body {
+	 height: 100%;
+	 font-family:  Rounded;
+	 background:url(images/114.jpg)no-repeat;
+	 background-size: cover;
+	}
+	main {
+	margin: 20px;
+	}
+	.top-menu, footer {
+	background: #ffffff8c;
+	}
+
+
+</style>
+
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li class="left-item"><a href="../sunhome/index.html">Главная</a></li>
+    <li class="left-item"><a href="blog.html">Блог</a></li>
+    <li class="left-item"><a href="osho.html">Ошо</a></li>
+    <li class="left-item"><a href = "more.html">Что-то ещё</a></li>
+    <li class="left-item"><a href="about.html">О нас</a></li>
+    <li class="right-item"><a href="avtorization.html">Войти</a></li>
+</ul>
+
+ <a class="navbar-logo" href="../sunhome/index.html"><img src="../alasunhome/images/logo.jpg"></a>
+ <span class = "close_menu" onclick = "close_menu()">x</span>
+ <span class = "open_menu" onclick = "open_menu()">=</span>
+</nav>
+
+<script src = "js/massiv_moon.js"></script>
+<script>
+
+	document.writeln('<main class="moon">Сегодня <span>'+MoonDay+'</span> лунный день');
+	document.writeln('<br><br>');
+	document.writeln('<section><div class="moon_text">');
+	document.writeln('Начало '+ day_start.toLocaleDateString() + ' в ' + day_start.toTimeString().slice(0,5));
+	document.writeln('.<br> Окончание '+day_finish.toLocaleDateString() + ' в ' + day_finish.toTimeString().slice(0,5));
+	document.writeln('.<br>&#10057;<br>');
+	document.writeln(massiv_Mesto[MoonDay]);
+	</script>
+
+<br><br><br><br><br>
+<style>
+
+
+</style>
+
+<a href="moon_other_day.html" class="moon_other_day" >Другие лунные дни</a>	
+</div></section></main>
+
+<a href = "../gadaniy/index.html" target = "_blank" id = "gadanie"> Погадать </a>
+
+
+<footer>
+<div id = "replaceme">
+  <span>"There is a crack in everything, that's how light gets in" ( Leonard Cohen )</span>
+  <span>"Есть трещина во всём, так проникает свет" ( Леонард Коэн ) </span>
+</div>
+<br>
+<p id = "copyright"> &copy; Сайт творчества и духовного развития.</p>
+</footer>
+
+</body>
+</html>
