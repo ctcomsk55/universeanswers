@@ -260,7 +260,7 @@ padding: 30px;
 }
 
 #main_head {
-height: 500px;
+height: 45vw;
 width: 100%;
 margin-bottom: 50px;
 color: white;
@@ -286,7 +286,7 @@ height: 100%;
 }
 #main_head_h2 {
 padding: 50px;
-padding-top: 350px;
+padding-top: 35vw;
 font-size: 35px;
 text-align: center;
 text-shadow: 0 0 15px #000000;
@@ -733,4 +733,5 @@ padding: 15px;
 	  font-size: 15px;
     }
 }
+
 
